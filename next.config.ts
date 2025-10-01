@@ -2,8 +2,9 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  // output the build into a folder named 'main build' per request
-  distDir: 'main build',
+  // Use the default .next build directory so Vercel can find required files
+  // (removed custom `distDir: 'main build'` which caused missing
+  // .next/routes-manifest.json during deployment)
   typescript: {
     ignoreBuildErrors: true,
   },
